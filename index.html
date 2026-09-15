@@ -32,7 +32,7 @@
   "url": "https://restaurantepaladino.com.br/",
   "telephone": "+553134476604",
   "servesCuisine": ["Brazilian", "Mineira", "Comida Mineira"],
-  "priceRange": "R$36 - R$94",
+  "priceRange": "R$22 - R$262",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Av. Gildo Macedo Lacerda, 300, Braúnas",
@@ -104,9 +104,13 @@
     <div class="cat-nav-scroll">
       <a href="#destaques" class="cat-link" data-cat="destaques">Destaques</a>
       <a href="#tira-gostos" class="cat-link" data-cat="tira-gostos">Tira-Gostos</a>
-      <a href="#carnes" class="cat-link" data-cat="carnes">Carnes</a>
-      <a href="#peixes" class="cat-link" data-cat="peixes">Peixes</a>
-      <a href="#doces-bebidas" class="cat-link" data-cat="doces-bebidas">Doces &amp; Bebidas</a>
+      <a href="#entradas" class="cat-link" data-cat="entradas">Entradas</a>
+      <a href="#aves-peixes" class="cat-link" data-cat="aves-peixes">Aves &amp; Peixes</a>
+      <a href="#carnes-porco" class="cat-link" data-cat="carnes-porco">Carnes &amp; Porco</a>
+      <a href="#sobremesas" class="cat-link" data-cat="sobremesas">Sobremesas</a>
+      <a href="#executivo" class="cat-link" data-cat="executivo">Executivo</a>
+      <a href="#bebidas" class="cat-link" data-cat="bebidas">Bebidas</a>
+      <a href="#cachacas-vinhos" class="cat-link" data-cat="cachacas-vinhos">Cachaças &amp; Vinhos</a>
       <a href="#local" class="cat-link" data-cat="local">Local</a>
     </div>
   </nav>
@@ -117,7 +121,7 @@
     <section class="section" id="destaques">
       <div class="section-head">
         <h2>Destaques do Paladino</h2>
-        <p>Os pratos mais pedidos e as especialidades da casa.</p>
+        <p>Pratos que mostram a casa: da panela mineira à brasa, do rio à sobremesa.</p>
       </div>
       <div class="featured-grid" id="featured-grid"></div>
     </section>
@@ -125,41 +129,337 @@
     <!-- TIRA-GOSTOS -->
     <section class="section section-alt" id="tira-gostos">
       <div class="section-head">
-        <h2>Tira-Gostos</h2>
+        <h2>Tira-Gostos Tradicionais</h2>
         <p>Para começar bem, do jeito mineiro.</p>
       </div>
       <div class="dish-grid" data-category="tira-gostos"></div>
     </section>
 
-    <!-- CARNES -->
-    <section class="section" id="carnes">
+    <!-- ENTRADAS -->
+    <section class="section" id="entradas">
       <div class="section-head">
-        <h2>Carnes</h2>
-        <p>Pratos de panela e da brasa, no capricho da casa.</p>
+        <h2>Entradas &amp; Saladas</h2>
       </div>
-      <div class="dish-grid" data-category="carnes"></div>
+      <div class="dish-grid" data-category="entradas"></div>
     </section>
 
-    <!-- PEIXES -->
-    <section class="section section-alt" id="peixes">
+    <!-- AVES & PEIXES -->
+    <section class="section section-alt" id="aves-peixes">
       <div class="section-head">
-        <h2>Peixes</h2>
-        <p>Sabor de fazenda, direto da cozinha do Paladino.</p>
+        <h2>Aves, Peixes &amp; Vegetariano</h2>
+        <p>Pratos tradicionais — servem 2 pessoas, salvo indicação em contrário.</p>
       </div>
-      <div class="dish-grid" data-category="peixes"></div>
+      <div class="dish-grid" data-category="aves-peixes"></div>
     </section>
 
-    <p class="empty-state" id="empty-state" hidden>Nenhum prato encontrado. Tente outra busca.</p>
-
-    <!-- DOCES E BEBIDAS (informativo) -->
-    <section class="section section-alt info-section" id="doces-bebidas">
+    <!-- CARNES & PORCO -->
+    <section class="section" id="carnes-porco">
       <div class="section-head">
-        <h2>Doces &amp; Bebidas</h2>
+        <h2>Carnes &amp; Porco</h2>
+        <p>Pratos tradicionais — servem 2 pessoas, salvo indicação em contrário.</p>
       </div>
-      <div class="info-card">
-        <p>Para fechar com chave de ouro, o Paladino serve o clássico <strong>pudim de leite condensado com calda</strong>. Na carta de bebidas, cervejas artesanais e uma seleção de cachaças completam a experiência.</p>
-        <p class="info-note">Cardápio completo de bebidas e sobremesas disponível no salão.</p>
+      <div class="dish-grid" data-category="carnes-porco"></div>
+    </section>
+
+    <!-- ACOMPANHAMENTOS -->
+    <section class="section section-alt list-section" id="acompanhamentos">
+      <div class="section-head">
+        <h2>Acompanhamentos</h2>
       </div>
+      <ul class="list-rows list-rows-grid list-group">
+        <li class="list-row"><span class="list-row-name">Arroz branco</span><span class="list-row-price">R$&nbsp;24,00</span></li>
+        <li class="list-row"><span class="list-row-name">Arroz com brócolis</span><span class="list-row-price">R$&nbsp;32,00</span></li>
+        <li class="list-row"><span class="list-row-name">Arroz com alho frito</span><span class="list-row-price">R$&nbsp;28,00</span></li>
+        <li class="list-row"><span class="list-row-name">Arroz cremoso de alho-poró</span><span class="list-row-price">R$&nbsp;36,00</span></li>
+        <li class="list-row"><span class="list-row-name">Angu de fubá</span><span class="list-row-price">R$&nbsp;22,00</span></li>
+        <li class="list-row"><span class="list-row-name">Couve refogada</span><span class="list-row-price">R$&nbsp;18,00</span></li>
+        <li class="list-row"><span class="list-row-name">Cesta de pão artesanal</span><span class="list-row-price">R$&nbsp;12,00</span></li>
+        <li class="list-row"><span class="list-row-name">Farofa de ovos</span><span class="list-row-price">R$&nbsp;24,00</span></li>
+        <li class="list-row"><span class="list-row-name">Feijão cozido</span><span class="list-row-price">R$&nbsp;24,00</span></li>
+        <li class="list-row"><span class="list-row-name">Feijão tropeiro</span><span class="list-row-price">R$&nbsp;38,00</span></li>
+        <li class="list-row"><span class="list-row-name">Tutu de feijão</span><span class="list-row-price">R$&nbsp;32,00</span></li>
+        <li class="list-row"><span class="list-row-name">Legumes assados</span><span class="list-row-price">R$&nbsp;24,00</span></li>
+        <li class="list-row"><span class="list-row-name">Purê de batata</span><span class="list-row-price">R$&nbsp;28,00</span></li>
+        <li class="list-row"><span class="list-row-name">Purê de banana</span><span class="list-row-price">R$&nbsp;28,00</span></li>
+        <li class="list-row"><span class="list-row-name">Ovo frito</span><span class="list-row-price">R$&nbsp;5,00</span></li>
+      </ul>
+    </section>
+
+    <!-- SOBREMESAS -->
+    <section class="section" id="sobremesas">
+      <div class="section-head">
+        <h2>Sobremesas</h2>
+      </div>
+      <div class="dish-grid" data-category="sobremesas"></div>
+    </section>
+
+    <!-- EXECUTIVO -->
+    <section class="section section-alt" id="executivo">
+      <div class="section-head">
+        <h2>Almoço Executivo</h2>
+        <p>Entrada do dia + prato principal. Pratos individuais disponíveis de terça a sexta-feira, exceto feriados e dias definidos pela casa.</p>
+      </div>
+      <div class="dish-grid" data-category="executivo"></div>
+    </section>
+
+    <!-- CRIANÇADA -->
+    <section class="section" id="criancada">
+      <div class="section-head">
+        <h2>Para a Criançada</h2>
+      </div>
+      <div class="dish-grid dish-grid-single" data-category="criancada"></div>
+    </section>
+
+    <p class="empty-state" id="empty-state" hidden>Nenhum item encontrado. Tente outra busca.</p>
+
+    <!-- BEBIDAS -->
+    <section class="section section-alt list-section" id="bebidas">
+      <div class="section-head">
+        <h2>Bebidas</h2>
+      </div>
+
+      <details class="list-group" open>
+        <summary>Chopes &amp; Cervejas</summary>
+        <div class="list-subgroup">
+        <p class="list-group-note">Chopes</p>
+        <ul class="list-rows">
+          <li class="list-row"><span class="list-row-name">Amstel <em>300ml</em></span><span class="list-row-meta">Premium American Lager · 5%</span><span class="list-row-price">R$&nbsp;14,00</span></li>
+        </ul>
+        </div>
+        <div class="list-subgroup">
+        <p class="list-group-note">Cervejas</p>
+        <ul class="list-rows">
+          <li class="list-row"><span class="list-row-name">Amstel <em>600ml</em></span><span class="list-row-meta">Premium American Lager · 5%</span><span class="list-row-price">R$&nbsp;18,00</span></li>
+          <li class="list-row"><span class="list-row-name">Heineken <em>600ml</em></span><span class="list-row-meta">Premium American Lager · 5%</span><span class="list-row-price">R$&nbsp;23,00</span></li>
+          <li class="list-row"><span class="list-row-name">Heineken <em>330ml</em></span><span class="list-row-meta">Premium American Lager · 5%</span><span class="list-row-price">R$&nbsp;15,00</span></li>
+          <li class="list-row"><span class="list-row-name">Heineken 0.0 <em>330ml</em></span><span class="list-row-meta">Sem álcool</span><span class="list-row-price">R$&nbsp;15,00</span></li>
+          <li class="list-row"><span class="list-row-name">Blue Moon <em>355ml</em></span><span class="list-row-meta">Witbier · 5,4%</span><span class="list-row-price">R$&nbsp;25,00</span></li>
+          <li class="list-row"><span class="list-row-name">Lagunitas <em>355ml</em></span><span class="list-row-meta">American India Pale Ale · 6%</span><span class="list-row-price">R$&nbsp;25,00</span></li>
+          <li class="list-row"><span class="list-row-name">Sol <em>330ml</em></span><span class="list-row-meta">Pilsen · 4,5%</span><span class="list-row-price">R$&nbsp;15,00</span></li>
+          <li class="list-row"><span class="list-row-name">Sol 0.0% <em>330ml</em></span><span class="list-row-meta">Pilsen sem álcool</span><span class="list-row-price">R$&nbsp;15,00</span></li>
+          <li class="list-row"><span class="list-row-name">Eisenbahn Pilsen <em>600ml</em></span><span class="list-row-meta">Pilsen · 4,8%</span><span class="list-row-price">R$&nbsp;18,00</span></li>
+          <li class="list-row"><span class="list-row-name">Eisenbahn Unfiltered <em>355ml</em></span><span class="list-row-meta">Pilsen não filtrada · 4,8%</span><span class="list-row-price">R$&nbsp;15,00</span></li>
+          <li class="list-row"><span class="list-row-name">Eisenbahn Pale Ale <em>355ml</em></span><span class="list-row-meta">Belgian Pale Ale · 4,8%</span><span class="list-row-price">R$&nbsp;15,00</span></li>
+          <li class="list-row"><span class="list-row-name">Eisenbahn American IPA <em>355ml</em></span><span class="list-row-meta">American India Pale Ale · 6,9%</span><span class="list-row-price">R$&nbsp;15,00</span></li>
+          <li class="list-row"><span class="list-row-name">Eisenbahn Session IPA <em>355ml</em></span><span class="list-row-meta">Session IPA · 4,6%</span><span class="list-row-price">R$&nbsp;15,00</span></li>
+          <li class="list-row"><span class="list-row-name">Baden Baden Golden <em>600ml</em></span><span class="list-row-meta">Golden Ale · 4,5%</span><span class="list-row-price">R$&nbsp;28,00</span></li>
+          <li class="list-row"><span class="list-row-name">Baden Baden IPA <em>600ml</em></span><span class="list-row-meta">American India Pale Ale · 6,4%</span><span class="list-row-price">R$&nbsp;28,00</span></li>
+        </ul>
+        </div>
+      </details>
+
+      <details class="list-group">
+        <summary>Não Alcoólicas</summary>
+        <ul class="list-rows">
+          <li class="list-row"><span class="list-row-name">Água Mineral</span><span class="list-row-meta">Natural ou gasosa</span><span class="list-row-price">R$&nbsp;9,00</span></li>
+          <li class="list-row"><span class="list-row-name">Água de Coco Natural</span><span class="list-row-price">R$&nbsp;12,00</span></li>
+          <li class="list-row"><span class="list-row-name">Suco Natural</span><span class="list-row-meta">Abacaxi · Abacaxi com hortelã · Maracujá · Limonada</span><span class="list-row-price">R$&nbsp;13,00</span></li>
+          <li class="list-row"><span class="list-row-name">Suco de Uva Integral</span><span class="list-row-price">R$&nbsp;20,00</span></li>
+          <li class="list-row"><span class="list-row-name">Suco Del Valle</span><span class="list-row-meta">Sabor uva · lata</span><span class="list-row-price">R$&nbsp;9,00</span></li>
+          <li class="list-row"><span class="list-row-name">Refrigerante</span><span class="list-row-meta">Coca-Cola KS (original/zero) · Fanta Guaraná (original/zero)</span><span class="list-row-price">R$&nbsp;9,00</span></li>
+          <li class="list-row"><span class="list-row-name">Refrigerante Mate Couro <em>600ml</em></span><span class="list-row-price">R$&nbsp;13,00</span></li>
+          <li class="list-row"><span class="list-row-name">Schweppes</span><span class="list-row-meta">Citrus ou Tônica</span><span class="list-row-price">R$&nbsp;9,00</span></li>
+          <li class="list-row"><span class="list-row-name">Energético Monster</span><span class="list-row-price">R$&nbsp;18,00</span></li>
+          <li class="list-row"><span class="list-row-name">Limão Espremido</span><span class="list-row-price">R$&nbsp;3,00</span></li>
+        </ul>
+      </details>
+
+      <details class="list-group">
+        <summary>Coquetéis</summary>
+        <ul class="list-rows">
+          <li class="list-row"><span class="list-row-name">Caipirinha da Casa</span><span class="list-row-meta">Cachaça de Ponte Nova, limão capeta e limão-taiti</span><span class="list-row-price">R$&nbsp;26,00</span></li>
+          <li class="list-row"><span class="list-row-name">Caipirinha da Feira</span><span class="list-row-meta">Cachaça de Ponte Nova, suco de limão, abacaxi e melaço de cana</span><span class="list-row-price">R$&nbsp;26,00</span></li>
+          <li class="list-row"><span class="list-row-name">Piña Descolada</span><span class="list-row-meta">Vodka, leite de coco, água de coco, suco de caju, xarope de mel e espuma de coco</span><span class="list-row-price">R$&nbsp;36,00</span></li>
+          <li class="list-row"><span class="list-row-name">Jabu</span><span class="list-row-meta">Cachaça amburana, licor de jabuticaba, suco de limão, xarope de açúcar e espuma de jabuticaba</span><span class="list-row-price">R$&nbsp;36,00</span></li>
+          <li class="list-row"><span class="list-row-name">Bão Daiquiri</span><span class="list-row-meta">Gin, aperol, suco de abacaxi, licor de mexerica, suco de limão, xarope de açúcar e água com gás</span><span class="list-row-price">R$&nbsp;36,00</span></li>
+          <li class="list-row"><span class="list-row-name">Doce Encanto</span><span class="list-row-meta">Rum ouro, licor de mexerica, suco de laranja e xarope de açúcar</span><span class="list-row-price">R$&nbsp;36,00</span></li>
+          <li class="list-row"><span class="list-row-name">Ouro de Fashioned</span><span class="list-row-meta">Cachaça jequitibá, cachaça bálsamo, licor de pequi e bitter de cacau</span><span class="list-row-price">R$&nbsp;36,00</span></li>
+          <li class="list-row"><span class="list-row-name">Uai Sangria</span><span class="list-row-meta">Serve 4 pessoas · vinho branco seco, cachaça carvalho, licor de mexerica, vermute dry, xarope de mel, suco de limão e frutas picadas</span><span class="list-row-price">R$&nbsp;136,00</span></li>
+        </ul>
+      </details>
+
+      <details class="list-group">
+        <summary>Mocktails</summary>
+        <p class="list-group-note">Um estilo de coquetéis sem álcool com muito sabor, criatividade e estilo.</p>
+        <ul class="list-rows">
+          <li class="list-row"><span class="list-row-name">Soda Artesanal</span><span class="list-row-meta">Tangerina ou maçã verde</span><span class="list-row-price">R$&nbsp;14,00</span></li>
+          <li class="list-row"><span class="list-row-name">Frescor de Manga</span><span class="list-row-meta">Suco de manga, suco de maracujá, xarope de capim cidreira e xarope de açúcar</span><span class="list-row-price">R$&nbsp;18,00</span></li>
+          <li class="list-row"><span class="list-row-name">Acerolinha</span><span class="list-row-meta">Suco de acerola, suco de maracujá, xarope de mel e água com gás</span><span class="list-row-price">R$&nbsp;18,00</span></li>
+          <li class="list-row"><span class="list-row-name">Coco Cerrado</span><span class="list-row-meta">Leite de coco, água de coco, suco de caju, xarope de mel e espuma de coco</span><span class="list-row-price">R$&nbsp;18,00</span></li>
+        </ul>
+      </details>
+
+      <details class="list-group">
+        <summary>Doses</summary>
+        <ul class="list-rows">
+          <li class="list-row"><span class="list-row-name">Campari</span><span class="list-row-price">R$&nbsp;16,00</span></li>
+          <li class="list-row"><span class="list-row-name">Gin Joliz</span><span class="list-row-meta">Lamas Destilaria · MG</span><span class="list-row-price">R$&nbsp;22,00</span></li>
+          <li class="list-row"><span class="list-row-name">Rum Apraz</span><span class="list-row-meta">Ouro e Cristal — Lamas Destilaria · MG</span><span class="list-row-price">R$&nbsp;18,00</span></li>
+          <li class="list-row"><span class="list-row-name">Tequila El Jimador</span><span class="list-row-price">R$&nbsp;24,00</span></li>
+          <li class="list-row"><span class="list-row-name">Vodka Deslim</span><span class="list-row-meta">Lamas Destilaria · MG</span><span class="list-row-price">R$&nbsp;18,00</span></li>
+          <li class="list-row"><span class="list-row-name">Whisky Canem Blended</span><span class="list-row-meta">Lamas Destilaria · MG</span><span class="list-row-price">R$&nbsp;26,00</span></li>
+          <li class="list-row"><span class="list-row-name">Whisky Rarus Single Malt</span><span class="list-row-meta">Lamas Destilaria · MG</span><span class="list-row-price">R$&nbsp;36,00</span></li>
+        </ul>
+      </details>
+
+      <details class="list-group">
+        <summary>Licores Mineiros</summary>
+        <ul class="list-rows">
+          <li class="list-row"><span class="list-row-name">Licor de Doce de Leite</span><span class="list-row-meta">Bendito Licor · Congonhas</span><span class="list-row-price">R$&nbsp;18,00</span></li>
+          <li class="list-row"><span class="list-row-name">Licor de Jabuticaba</span><span class="list-row-meta">Sabarabuçu · Sabará</span><span class="list-row-price">R$&nbsp;18,00</span></li>
+          <li class="list-row"><span class="list-row-name">Licor de Milho Verde</span><span class="list-row-meta">Keka Licores · BH</span><span class="list-row-price">R$&nbsp;16,00</span></li>
+          <li class="list-row"><span class="list-row-name">Licor de Mexerica</span><span class="list-row-meta">Keka Licores · BH</span><span class="list-row-price">R$&nbsp;16,00</span></li>
+          <li class="list-row"><span class="list-row-name">Licor de Pequi</span><span class="list-row-meta">Keka Licores · BH</span><span class="list-row-price">R$&nbsp;16,00</span></li>
+        </ul>
+      </details>
+
+      <details class="list-group">
+        <summary>Cafés</summary>
+        <ul class="list-rows">
+          <li class="list-row"><span class="list-row-name">Espresso</span><span class="list-row-meta">Três Corações Cerrado Mineiro — aroma e sabor floral, adocicado, com notas de chocolate e corpo denso e cremoso</span><span class="list-row-price">R$&nbsp;8,00</span></li>
+          <li class="list-row"><span class="list-row-name">Espresso Mineiro</span><span class="list-row-meta">Café espresso com doce de leite</span><span class="list-row-price">R$&nbsp;10,00</span></li>
+        </ul>
+      </details>
+    </section>
+
+    <!-- CACHAÇAS & VINHOS -->
+    <section class="section list-section" id="cachacas-vinhos">
+      <div class="section-head">
+        <h2>Cachaças &amp; Vinhos</h2>
+        <p>Uma seleção de cachaças mineiras por região, além de uma carta de vinhos nacionais e importados.</p>
+      </div>
+
+      <details class="list-group" open>
+        <summary>Cachaças Mineiras — Norte de Minas</summary>
+        <ul class="list-rows">
+          <li class="list-row"><span class="list-row-name">Asa Branca</span><span class="list-row-meta">Ouro · Amburana · Salinas</span><span class="list-row-price">R$&nbsp;12,00</span></li>
+          <li class="list-row"><span class="list-row-name">Boazinha</span><span class="list-row-meta">Ouro · Bálsamo · Salinas</span><span class="list-row-price">R$&nbsp;8,00</span></li>
+          <li class="list-row"><span class="list-row-name">Cana Velha</span><span class="list-row-meta">Ouro · Bálsamo · Montes Claros</span><span class="list-row-price">R$&nbsp;8,00</span></li>
+          <li class="list-row"><span class="list-row-name">Canarinha</span><span class="list-row-meta">Ouro · Bálsamo · Salinas</span><span class="list-row-price">R$&nbsp;38,00</span></li>
+          <li class="list-row"><span class="list-row-name">Caribé</span><span class="list-row-meta">Ouro · Amburana · Januária</span><span class="list-row-price">R$&nbsp;12,00</span></li>
+          <li class="list-row"><span class="list-row-name">Francesinha</span><span class="list-row-meta">Ouro · Carvalho · Pedra Azul</span><span class="list-row-price">R$&nbsp;12,00</span></li>
+          <li class="list-row"><span class="list-row-name">Claudionor</span><span class="list-row-meta">Ouro · Amburana · Januária</span><span class="list-row-price">R$&nbsp;12,00</span></li>
+          <li class="list-row"><span class="list-row-name">Pirapora</span><span class="list-row-meta">Prata · Amendoim · Pirapora</span><span class="list-row-price">R$&nbsp;12,00</span></li>
+          <li class="list-row"><span class="list-row-name">Seleta</span><span class="list-row-meta">Ouro · Amburana · Salinas</span><span class="list-row-price">R$&nbsp;8,00</span></li>
+          <li class="list-row"><span class="list-row-name">Salineira</span><span class="list-row-meta">Ouro · Bálsamo · Salinas</span><span class="list-row-price">R$&nbsp;18,00</span></li>
+          <li class="list-row"><span class="list-row-name">Severina do Popote</span><span class="list-row-meta">Ouro · Bálsamo-Jequitibá · Araçuaí</span><span class="list-row-price">R$&nbsp;18,00</span></li>
+        </ul>
+      </details>
+
+      <details class="list-group">
+        <summary>Cachaças Mineiras — Central</summary>
+        <ul class="list-rows">
+          <li class="list-row"><span class="list-row-name">Bem me Quer</span><span class="list-row-meta">Ouro · Carvalho-Bálsamo · Pitangui</span><span class="list-row-price">R$&nbsp;12,00</span></li>
+          <li class="list-row"><span class="list-row-name">Clandestina</span><span class="list-row-meta">Ouro · Amburana · Paineiras</span><span class="list-row-price">R$&nbsp;12,00</span></li>
+          <li class="list-row"><span class="list-row-name">Colombina</span><span class="list-row-meta">Ouro · Jatobá · Alvinópolis</span><span class="list-row-price">R$&nbsp;12,00</span></li>
+          <li class="list-row"><span class="list-row-name">Dona Branca</span><span class="list-row-meta">Prata · Jequitibá · Papagaios</span><span class="list-row-price">R$&nbsp;8,00</span></li>
+          <li class="list-row"><span class="list-row-name">Famosinha de Minas</span><span class="list-row-meta">Ouro · Amburana · Papagaios</span><span class="list-row-price">R$&nbsp;8,00</span></li>
+          <li class="list-row"><span class="list-row-name">Flor das Gerais</span><span class="list-row-meta">Ouro · Carvalho · Felixlândia</span><span class="list-row-price">R$&nbsp;16,00</span></li>
+          <li class="list-row"><span class="list-row-name">Melicana Pura Arte</span><span class="list-row-meta">Ouro · Castanheira · Bom Despacho</span><span class="list-row-price">R$&nbsp;24,00</span></li>
+          <li class="list-row"><span class="list-row-name">Menina Branca</span><span class="list-row-meta">Prata · Inox · Serro</span><span class="list-row-price">R$&nbsp;16,00</span></li>
+          <li class="list-row"><span class="list-row-name">Prazer de Minas</span><span class="list-row-meta">Ouro · Carvalho · Esmeraldas</span><span class="list-row-price">R$&nbsp;18,00</span></li>
+          <li class="list-row"><span class="list-row-name">Providência</span><span class="list-row-meta">Ouro · Amburana-Carvalho · Buenópolis</span><span class="list-row-price">R$&nbsp;12,00</span></li>
+        </ul>
+      </details>
+
+      <details class="list-group">
+        <summary>Cachaças Mineiras — outras regiões</summary>
+        <div class="list-subgroup">
+        <p class="list-group-note">Triângulo Mineiro</p>
+        <ul class="list-rows">
+          <li class="list-row"><span class="list-row-name">Lenda do Chapadão</span><span class="list-row-meta">Ouro · Carvalho · Uberaba</span><span class="list-row-price">R$&nbsp;12,00</span></li>
+        </ul>
+        </div>
+        <div class="list-subgroup">
+        <p class="list-group-note">Campo das Vertentes</p>
+        <ul class="list-rows">
+          <li class="list-row"><span class="list-row-name">Século XVIII</span><span class="list-row-meta">Prata · Inox · Coronel Xavier Chaves</span><span class="list-row-price">R$&nbsp;18,00</span></li>
+        </ul>
+        </div>
+        <div class="list-subgroup">
+        <p class="list-group-note">Vale do Rio Doce</p>
+        <ul class="list-rows">
+          <li class="list-row"><span class="list-row-name">Coluninha</span><span class="list-row-meta">Prata · Inox · Coluna</span><span class="list-row-price">R$&nbsp;10,00</span></li>
+          <li class="list-row"><span class="list-row-name">Mineiriana</span><span class="list-row-meta">Ouro · Carvalho · Ipoema</span><span class="list-row-price">R$&nbsp;24,00</span></li>
+        </ul>
+        </div>
+        <div class="list-subgroup">
+        <p class="list-group-note">Zona da Mata</p>
+        <ul class="list-rows">
+          <li class="list-row"><span class="list-row-name">Paladino</span><span class="list-row-meta">Ouro · Carvalho · Ponte Nova</span><span class="list-row-price">R$&nbsp;8,00</span></li>
+          <li class="list-row"><span class="list-row-name">Alto Caparaó</span><span class="list-row-meta">Prata · Jequitibá Rosa · Alto Caparaó</span><span class="list-row-price">R$&nbsp;12,00</span></li>
+        </ul>
+        </div>
+        <div class="list-subgroup">
+        <p class="list-group-note">Sul de Minas</p>
+        <ul class="list-rows">
+          <li class="list-row"><span class="list-row-name">Divina Cana Jupitér</span><span class="list-row-meta">Ouro · Carvalho · Três Pontas</span><span class="list-row-price">R$&nbsp;24,00</span></li>
+          <li class="list-row"><span class="list-row-name">Tiê</span><span class="list-row-meta">Ouro · Carvalho · Aiuruoca</span><span class="list-row-price">R$&nbsp;18,00</span></li>
+        </ul>
+        </div>
+      </details>
+
+      <details class="list-group">
+        <summary>Vinhos — Espumantes &amp; Brancos</summary>
+        <div class="list-subgroup">
+        <p class="list-group-note">Espumantes · Brasil</p>
+        <ul class="list-rows">
+          <li class="list-row"><span class="list-row-name">Occasione Brut</span><span class="list-row-meta">Serra Gaúcha · Riesling Itálico, Chardonnay e Sauvignon Blanc</span><span class="list-row-price">R$&nbsp;138,00</span></li>
+          <li class="list-row"><span class="list-row-name">Occasione Brut Rosé</span><span class="list-row-meta">Serra Gaúcha · Merlot e Pinot Noir</span><span class="list-row-price">R$&nbsp;138,00</span></li>
+          <li class="list-row"><span class="list-row-name">Casa Geraldo Tradicional Brut</span><span class="list-row-meta">Divinolândia · 70% Chardonnay e 30% Pinot Noir</span><span class="list-row-price">R$&nbsp;225,00</span></li>
+        </ul>
+        </div>
+        <div class="list-subgroup">
+        <p class="list-group-note">Vinho Branco</p>
+        <ul class="list-rows">
+          <li class="list-row"><span class="list-row-name">Casa Geraldo Alma</span><span class="list-row-meta">Brasil · Andradas · Sauvignon Blanc</span><span class="list-row-price">R$&nbsp;138,00</span></li>
+          <li class="list-row"><span class="list-row-name">Origium Blanco</span><span class="list-row-meta">Espanha · Cariñena · 80% Macabeo e 20% Chardonnay</span><span class="list-row-price">R$&nbsp;132,00</span></li>
+          <li class="list-row"><span class="list-row-name">Duas Capelas</span><span class="list-row-meta">Portugal · Douro · 50% Gouveio, 25% Côdega e 25% Rabigato</span><span class="list-row-price">R$&nbsp;148,00</span></li>
+          <li class="list-row"><span class="list-row-name">Pequenos Rebentos Vinho Verde</span><span class="list-row-meta">Portugal · Minho · 50% Alvarinho e 50% Trajadura</span><span class="list-row-price">R$&nbsp;252,00</span></li>
+        </ul>
+        </div>
+        <div class="list-subgroup">
+        <p class="list-group-note">Vinho Rosé</p>
+        <ul class="list-rows">
+          <li class="list-row"><span class="list-row-name">Munay Rosé</span><span class="list-row-meta">Argentina · Cafayate · Malbec</span><span class="list-row-price">R$&nbsp;138,00</span></li>
+        </ul>
+        </div>
+      </details>
+
+      <details class="list-group">
+        <summary>Vinhos — Tintos</summary>
+        <div class="list-subgroup">
+        <p class="list-group-note">Brasil</p>
+        <ul class="list-rows">
+          <li class="list-row"><span class="list-row-name">Paladino Reserva</span><span class="list-row-meta">Flores da Cunha · Malbec</span><span class="list-row-price">R$&nbsp;168,00</span></li>
+          <li class="list-row"><span class="list-row-name">Syrah do Gato Negro</span><span class="list-row-meta">Casa Geraldo, Andradas · Syrah</span><span class="list-row-price">R$&nbsp;192,00</span></li>
+          <li class="list-row"><span class="list-row-name">Reserva Signature</span><span class="list-row-meta">Casa Geraldo, Andradas · Cabernet Sauvignon</span><span class="list-row-price">R$&nbsp;268,00</span></li>
+        </ul>
+        </div>
+        <div class="list-subgroup">
+        <p class="list-group-note">Argentina &amp; Chile</p>
+        <ul class="list-rows">
+          <li class="list-row"><span class="list-row-name">Altus Gran Vin</span><span class="list-row-meta">Mendoza · 50% Malbec, 30% Cabernet Sauvignon e 20% Merlot</span><span class="list-row-price">R$&nbsp;298,00</span></li>
+          <li class="list-row"><span class="list-row-name">Casa Araujo Cask</span><span class="list-row-meta">Mendoza · Malbec</span><span class="list-row-price">R$&nbsp;188,00</span></li>
+          <li class="list-row"><span class="list-row-name">Casa Araujo</span><span class="list-row-meta">Mendoza · Cabernet Sauvignon</span><span class="list-row-price">R$&nbsp;132,00</span></li>
+          <li class="list-row"><span class="list-row-name">Vigia Gran Reserva</span><span class="list-row-meta">Santiago · Cabernet Sauvignon</span><span class="list-row-price">R$&nbsp;198,00</span></li>
+          <li class="list-row"><span class="list-row-name">Vigia Superior <em>375ml</em></span><span class="list-row-meta">Valle Central · Cabernet Sauvignon</span><span class="list-row-price">R$&nbsp;68,00</span></li>
+        </ul>
+        </div>
+        <div class="list-subgroup">
+        <p class="list-group-note">Europa</p>
+        <ul class="list-rows">
+          <li class="list-row"><span class="list-row-name">Château Tassin</span><span class="list-row-meta">França · Bordeaux · 57% Merlot, 35% Cabernet Sauvignon e 8% Petit Verdot</span><span class="list-row-price">R$&nbsp;196,00</span></li>
+          <li class="list-row"><span class="list-row-name">La Grive Musicienne</span><span class="list-row-meta">França · Languedoc-Roussillon · Pinot Noir</span><span class="list-row-price">R$&nbsp;138,00</span></li>
+          <li class="list-row"><span class="list-row-name">Comino Dei Prati</span><span class="list-row-meta">Itália · Puglia · Primitivo</span><span class="list-row-price">R$&nbsp;148,00</span></li>
+          <li class="list-row"><span class="list-row-name">Labaro Chianti D.O.C.G</span><span class="list-row-meta">Itália · Toscana · 80% Sangiovese, 10% Canaiolo e 10% Colorino</span><span class="list-row-price">R$&nbsp;148,00</span></li>
+          <li class="list-row"><span class="list-row-name">Duas Capelas Reserva DOC</span><span class="list-row-meta">Portugal · Douro · 40% Tinta Roriz, 30% Touriga Nacional e 30% Touriga Franca</span><span class="list-row-price">R$&nbsp;188,00</span></li>
+          <li class="list-row"><span class="list-row-name">Fonte Sagrada</span><span class="list-row-meta">Portugal · Dão · 40% Touriga Nacional, 30% Tinta Roriz, 20% Alfrocheiro e 10% Jaen</span><span class="list-row-price">R$&nbsp;148,00</span></li>
+          <li class="list-row"><span class="list-row-name">Glorita IGP</span><span class="list-row-meta">Portugal · Lisboa · 30% Touriga Nacional, 30% Alicante Bouchett e 40% Castelão</span><span class="list-row-price">R$&nbsp;132,00</span></li>
+          <li class="list-row"><span class="list-row-name">Don Paulino</span><span class="list-row-meta">Espanha · Rioja · Tempranillo</span><span class="list-row-price">R$&nbsp;158,00</span></li>
+        </ul>
+        </div>
+      </details>
     </section>
 
   </div>
@@ -171,7 +471,7 @@
     </div>
     <div class="about-content">
       <p>O Paladino é um restaurante-fazenda no bairro Braúnas, na região da Pampulha, em Belo Horizonte. Inaugurado em 2002, ocupa uma área de 30.000 m² de muito verde e ar bucólico, com construções erguidas com madeira de fazendas antigas e decoração rústica.</p>
-      <p>O ambiente campestre e a comida com gostinho de "feito em casa" fazem do Paladino um dos endereços mais lembrados quando o assunto é comida mineira em BH.</p>
+      <p>O ambiente campestre e a comida com gostinho de "feito em casa" fazem do Paladino um dos endereços mais lembrados quando o assunto é comida mineira em BH. Para a criançada, a casa também conta com o Espaço Paladininho e atividades programadas (consulte disponibilidade com a equipe).</p>
     </div>
   </section>
 
@@ -240,6 +540,7 @@
           </li>
         </ul>
         <a class="btn btn-primary btn-block" href="https://www.google.com/maps/search/?api=1&query=Restaurante+Paladino+Av+Gildo+Macedo+Lacerda+300+Belo+Horizonte+MG" target="_blank" rel="noopener">Como chegar</a>
+        <p class="payment-note">Formas de pagamento: dinheiro, débito e crédito. Ticket Restaurante e Sodexo aceitos apenas no almoço de terça a sexta, exceto feriados.</p>
       </div>
       <div class="location-map">
         <iframe

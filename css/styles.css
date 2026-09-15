@@ -270,8 +270,15 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .dish-visual .visual-fallback svg { width: 42%; height: 42%; opacity: 0.35; color: var(--cream); }
 .dish-visual.cat-tira-gostos { background: linear-gradient(145deg, var(--gold), #9c7524); }
-.dish-visual.cat-carnes { background: linear-gradient(145deg, var(--red-soft), var(--red-dark)); }
-.dish-visual.cat-peixes { background: linear-gradient(145deg, var(--green-light), var(--green)); }
+.dish-visual.cat-entradas { background: linear-gradient(145deg, #7f9a72, var(--green)); }
+.dish-visual.cat-cow { background: linear-gradient(145deg, var(--red-soft), var(--red-dark)); }
+.dish-visual.cat-pig { background: linear-gradient(145deg, #b5615a, #7a332c); }
+.dish-visual.cat-chicken { background: linear-gradient(145deg, #d9a441, #a9781f); }
+.dish-visual.cat-fish { background: linear-gradient(145deg, var(--green-light), var(--green)); }
+.dish-visual.cat-leaf { background: linear-gradient(145deg, #6fa16a, #375c37); }
+.dish-visual.cat-sobremesas { background: linear-gradient(145deg, #c98a7c, #8a4a40); }
+.dish-visual.cat-executivo { background: linear-gradient(145deg, #9c7524, var(--red-dark)); }
+.dish-visual.cat-criancada { background: linear-gradient(145deg, var(--gold), #c05a3a); }
 
 /* ===== Featured grid ===== */
 .featured-grid {
@@ -343,6 +350,22 @@ ul { margin: 0; padding: 0; list-style: none; }
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 16px;
 }
+.dish-grid-single {
+  grid-template-columns: minmax(150px, 260px);
+  justify-content: center;
+}
+.dish-meta {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  font-style: italic;
+  margin: 0 0 10px;
+}
+.dish-note {
+  font-size: 0.85rem;
+  color: var(--red);
+  font-weight: 600;
+  margin: 0 0 10px;
+}
 .dish-card {
   background: var(--white);
   border-radius: var(--radius-md);
@@ -368,18 +391,75 @@ ul { margin: 0; padding: 0; list-style: none; }
   padding: 30px 20px;
 }
 
-/* ===== Info section (doces/bebidas) ===== */
-.info-card {
+/* ===== List sections (acompanhamentos, bebidas, cachaças & vinhos) ===== */
+.list-section { max-width: 780px; }
+.list-section.section-alt { max-width: none; }
+.list-section.section-alt > * { max-width: 780px; margin-left: auto; margin-right: auto; }
+
+.list-group {
   background: var(--white);
-  border-radius: var(--radius-lg);
-  padding: 24px;
+  border-radius: var(--radius-md);
   box-shadow: var(--shadow);
-  max-width: 700px;
-  margin: 0 auto;
+  margin-bottom: 14px;
+  padding: 4px 20px 14px;
+}
+ul.list-rows.list-group { padding: 14px 20px; }
+details.list-group summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 16px 0 10px;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+details.list-group summary::-webkit-details-marker { display: none; }
+details.list-group summary::after {
+  content: "+";
+  font-size: 1.3rem;
+  color: var(--ink-soft);
+  transition: transform 0.15s ease;
+}
+details.list-group[open] summary::after { content: "\2212"; }
+
+.list-group-note {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  margin: 14px 0 4px;
+}
+
+.list-rows { margin: 0; padding: 0; }
+.list-rows-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 4px 24px;
+}
+.list-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(43,33,26,0.08);
+}
+.list-rows-grid .list-row { border-bottom: none; padding: 6px 0; }
+.list-row:last-child { border-bottom: none; }
+.list-row-name { font-weight: 600; color: var(--ink); font-size: 0.94rem; }
+.list-row-name em { font-style: normal; font-weight: 500; color: var(--ink-soft); font-size: 0.85rem; }
+.list-row-meta { flex-basis: 100%; font-size: 0.82rem; color: var(--ink-soft); }
+.list-row-price { margin-left: auto; font-family: var(--font-display); font-weight: 600; color: var(--red); white-space: nowrap; }
+
+.payment-note {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  margin-top: 14px;
   text-align: center;
 }
-.info-card p { margin: 0 0 10px; color: var(--ink-soft); }
-.info-note { font-size: 0.85rem; font-style: italic; }
 
 /* ===== About ===== */
 .about-content {
@@ -512,6 +592,14 @@ ul { margin: 0; padding: 0; list-style: none; }
 .modal-body h3 { font-family: var(--font-display); font-size: 1.5rem; margin: 0 0 10px; color: var(--ink); }
 .modal-body p { color: var(--ink-soft); margin: 0 0 18px; }
 .modal-price { font-family: var(--font-display); font-size: 1.6rem; font-weight: 600; color: var(--red); }
+.modal-price-alt {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  margin-top: 4px;
+}
 
 /* ===== Sticky mobile action bar ===== */
 .action-bar {
