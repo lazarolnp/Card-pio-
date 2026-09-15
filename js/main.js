@@ -49,6 +49,18 @@
   // Contact form: client-side validation + mailto handoff (site is static, no backend).
   var form = document.getElementById("contact-form");
   var status = document.getElementById("form-status");
+  var dateField = document.getElementById("date");
+
+  if (dateField) {
+    dateField.min = new Date().toISOString().slice(0, 10);
+  }
+
+  function formatPreferredDate(isoDate) {
+    if (!isoDate) return "sem preferência";
+    var parts = isoDate.split("-");
+    if (parts.length !== 3) return isoDate;
+    return parts[2] + "/" + parts[1] + "/" + parts[0];
+  }
 
   function showStatus(message, type) {
     if (!status) return;
@@ -64,6 +76,8 @@
       var email = form.elements["email"].value.trim();
       var phone = form.elements["phone"].value.trim();
       var service = form.elements["service"].value;
+      var date = form.elements["date"].value;
+      var period = form.elements["period"].value;
       var message = form.elements["message"].value.trim();
 
       var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -84,6 +98,8 @@
         "E-mail: " + email,
         "Telefone: " + (phone || "não informado"),
         "Serviço de interesse: " + (service || "não informado"),
+        "Data preferida: " + formatPreferredDate(date),
+        "Período preferido: " + (period || "sem preferência"),
         "",
         message,
       ];
@@ -102,5 +118,48 @@
   var yearEl = document.getElementById("current-year");
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
+  }
+
+  // Subtle fade-in-up reveal for section content as it scrolls into view.
+  var revealSelectors = [
+    ".section-head",
+    ".service-card",
+    ".about-visual",
+    ".about-copy",
+    ".rating-summary",
+    ".testimonial-card",
+    ".contact-panel",
+    ".form-panel",
+  ];
+  var revealEls = document.querySelectorAll(revealSelectors.join(","));
+
+  if (window.IntersectionObserver && revealEls.length) {
+    revealEls.forEach(function (el) {
+      el.classList.add("reveal");
+    });
+
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0, rootMargin: "0px 0px -10% 0px" }
+    );
+
+    revealEls.forEach(function (el) {
+      observer.observe(el);
+    });
+
+    // Safety net: never leave content permanently hidden if an observer
+    // callback gets missed (e.g. very fast programmatic scrolling).
+    setTimeout(function () {
+      revealEls.forEach(function (el) {
+        el.classList.add("is-visible");
+      });
+    }, 4000);
   }
 })();

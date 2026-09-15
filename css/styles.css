@@ -305,10 +305,13 @@ p {
 /* Hero */
 .hero {
   position: relative;
-  background: linear-gradient(135deg, var(--color-navy-dark), var(--color-navy) 55%, var(--color-blue) 130%);
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.09) 1px, transparent 1px),
+    linear-gradient(135deg, var(--color-navy-dark), var(--color-navy) 55%, var(--color-blue) 130%);
+  background-size: 22px 22px, auto;
   color: var(--color-white);
   overflow: hidden;
-  padding: 64px 0 88px;
+  padding: 64px 0 0;
 }
 
 .hero::before,
@@ -339,6 +342,15 @@ p {
   display: grid;
   gap: 40px;
   align-items: center;
+  padding-bottom: 88px;
+}
+
+.hero-divider {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: -2px;
 }
 
 @media (min-width: 900px) {
@@ -392,15 +404,29 @@ p {
   max-width: 480px;
 }
 
+.hero-stat {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.hero-stat svg {
+  width: 22px;
+  height: 22px;
+  color: var(--color-blue-light);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
 .hero-stat strong {
   display: block;
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   color: var(--color-white);
 }
 
 .hero-stat span {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.75);
 }
 
@@ -547,17 +573,40 @@ p {
 .about-visual {
   position: relative;
   border-radius: var(--radius-lg);
-  background: linear-gradient(160deg, var(--color-navy), var(--color-blue));
-  min-height: 320px;
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.12) 1.5px, transparent 1.5px),
+    linear-gradient(160deg, var(--color-navy), var(--color-blue));
+  background-size: 20px 20px, auto;
+  min-height: 340px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 
+.about-visual-ring {
+  position: relative;
+  width: 46%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.about-visual-ring::before {
+  content: "";
+  position: absolute;
+  inset: -18px;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.22);
+}
+
 .about-visual svg {
-  width: 62%;
-  color: rgba(255, 255, 255, 0.92);
+  width: 52%;
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .about-badge {
@@ -1072,6 +1121,28 @@ p {
 
 .skip-link:focus {
   top: 12px;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.services-grid .service-card:nth-child(2),
+.testimonials-grid .testimonial-card:nth-child(2) {
+  transition-delay: 0.08s;
+}
+
+.services-grid .service-card:nth-child(3),
+.testimonials-grid .testimonial-card:nth-child(3) {
+  transition-delay: 0.16s;
 }
 
 @media (prefers-reduced-motion: reduce) {
