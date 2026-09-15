@@ -125,7 +125,7 @@
 
   function featuredCardHTML(item) {
     return (
-      '<button class="featured-card" data-id="' + item.id + '">' +
+      '<button type="button" class="featured-card" data-id="' + item.id + '">' +
         '<div style="position:relative">' +
           dishVisualHTML(item) +
           (item.badge ? '<span class="featured-badge">' + item.badge + '</span>' : '') +
@@ -144,7 +144,7 @@
 
   function dishCardHTML(item) {
     return (
-      '<button class="dish-card" data-id="' + item.id + '">' +
+      '<button type="button" class="dish-card" data-id="' + item.id + '">' +
         dishVisualHTML(item) +
         '<div class="card-body">' +
           '<h3>' + item.name + '</h3>' +
